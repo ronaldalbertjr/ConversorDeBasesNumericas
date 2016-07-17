@@ -30,34 +30,59 @@ namespace NumbeToBinaryConverter
             Array.Reverse(bina);
             return new string(bina);
         }
-        public static string numberToHexadecimal(ulong n)
+
+        public static string decimalToHexadecimal(ulong n)
         {
-            List<string> hexa = new List<string>();
+            int[] hexa = new int[(int)Math.Floor(Math.Log(n, 16)) + 1];
             string hexad = "";
-            int number = 0;
-            int counter = 0;
-            if(n < 0)
+            while (n > 0)
             {
-                throw new NegativeNumberException();
-            }
-            while (n != 0)
-            {
-                if (number > 15)
+                for (int i = 0; i < hexa.Length; i++)
                 {
-                    number = 0;
-                    counter++;
+                    if (hexa[i] == 16)
+                    {
+                        hexa[i + 1]++;
+                        hexa[i] = 0;
+                    }
                 }
-                if (number == 0)
-                {
-                    hexa.Add(Convert.ToString(number));
-                }
-                hexa[0] = Convert.ToString(number);
-                number++;
+                hexa[0]++;
                 n--;
             }
-            foreach(string i in hexa)
+            for (int i = 0; i < hexa.Length; i++)
             {
-                hexad += i;
+                if (hexa[i] == 16)
+                {
+                    hexa[i + 1]++;
+                    hexa[i] = 0;
+                }
+            }
+            Array.Reverse(hexa);
+            foreach (int i in hexa)
+            {
+                switch (i)
+                {
+                    case 15:
+                        hexad += "F";
+                        break;
+                    case 14:
+                        hexad += "E";
+                        break;
+                    case 13:
+                        hexad += "D";
+                        break;
+                    case 12:
+                        hexad += "C";
+                        break;
+                    case 11:
+                        hexad += "B";
+                        break;
+                    case 10:
+                        hexad += "A";
+                        break;
+                    default:
+                        hexad += Convert.ToString(i);
+                        break;
+                }
             }
             return hexad;
         }

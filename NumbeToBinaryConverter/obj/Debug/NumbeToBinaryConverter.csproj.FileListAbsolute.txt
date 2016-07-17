@@ -16,3 +16,12 @@ C:\Users\usuario\Downloads\NumbeToBinaryConverter-2016-07-15\NumbeToBinaryConver
 C:\Users\usuario\Downloads\NumbeToBinaryConverter-2016-07-15\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.Properties.Resources.resources
 C:\Users\usuario\Downloads\NumbeToBinaryConverter-2016-07-15\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.csproj.GenerateResource.Cache
 C:\Users\usuario\Downloads\NumbeToBinaryConverter-2016-07-15\NumbeToBinaryConverter\NumbeToBinaryConverter\bin\Debug\NumbeToBinaryConverter.pdb
+C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\bin\Debug\NumbeToBinaryConverter.exe.config
+C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.exe
+C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.pdb
+C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\bin\Debug\NumbeToBinaryConverter.exe
+C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\bin\Debug\NumbeToBinaryConverter.pdb
+C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.Form1.resources
+C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.Properties.Resources.resources
+C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.csproj.GenerateResource.Cache

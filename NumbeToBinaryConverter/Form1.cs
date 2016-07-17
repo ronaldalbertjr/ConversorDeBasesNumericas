@@ -34,5 +34,22 @@ namespace NumbeToBinaryConverter
                 MessageBox.Show("Número Não Aceito");
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                number = Convert.ToUInt64(textBox1.Text);
+                textBox3.Text = Bin.decimalToHexadecimal(number);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("Esse caractere não é um numero");
+            }
+            catch (OverflowException ex)
+            {
+                MessageBox.Show("Número Não Aceito");
+            }
+        }
     }
 }
