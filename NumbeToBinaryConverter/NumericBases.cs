@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace NumbeToBinaryConverter
 {
-    static class Bin
+    static class NumericBases
     {   
-        public static string numberToBin(ulong n)
+        public static string decimalToBinary(ulong n)
         {
             string bin = "";
-            if(n < 0)
-            {
-                throw new NegativeNumberException();
-            }
             if (n == 0)
             {
                 return "0";
@@ -85,6 +81,29 @@ namespace NumbeToBinaryConverter
                 }
             }
             return hexad;
+        }
+
+        public static int binaryToDecimal(string bin)
+        {
+            int dec = 0;
+            char[] bina = bin.ToCharArray();
+            /* foreach (char i in bina)
+            {
+                if (i != Convert.ToChar("0") || i != Convert.ToChar("1"))
+                {
+                    throw new FormatException();
+                }
+
+            }*/
+            for (int i = 0; i < bina.Length; i++)
+            {
+                if (bina[i] == Convert.ToChar("1"))
+                {
+                    bina[i] = Convert.ToChar("0");
+                    dec += Convert.ToInt32(Math.Pow(2, bina.Length - (i + 1)));
+                }
+            }
+            return dec;
         }
     }
 }

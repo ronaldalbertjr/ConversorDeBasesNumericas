@@ -13,6 +13,7 @@ namespace NumbeToBinaryConverter
     public partial class Form1 : Form
     {
         ulong number;
+        string number2;
         public Form1()
         {
             InitializeComponent();
@@ -20,18 +21,33 @@ namespace NumbeToBinaryConverter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (textBox1.Text != "")
             {
-                number = Convert.ToUInt64(textBox1.Text);
-                textBox2.Text = Convert.ToString(Bin.numberToBin(number));
+                try
+                {
+                    number = Convert.ToUInt64(textBox1.Text);
+                    textBox2.Text = Convert.ToString(NumericBases.decimalToBinary(number));
+                }
+                catch (FormatException ex)
+                {
+                    MessageBox.Show("Esse caractere não é um numero");
+                }
+                catch (OverflowException ex)
+                {
+                    MessageBox.Show("Número Não Aceito");
+                }
             }
-            catch (FormatException ex)
+            else
             {
-                MessageBox.Show("Esse caractere não é um numero");
-            }
-            catch (OverflowException ex)
-            {
-                MessageBox.Show("Número Não Aceito");
+                try
+                {
+                    number2 = textBox2.Text;
+                    textBox1.Text = Convert.ToString(NumericBases.binaryToDecimal(number2));
+                }
+                catch (FormatException ex)
+                {
+                    MessageBox.Show("Isso não é um binario");
+                }
             }
         }
 
@@ -40,7 +56,7 @@ namespace NumbeToBinaryConverter
             try
             {
                 number = Convert.ToUInt64(textBox1.Text);
-                textBox3.Text = Bin.decimalToHexadecimal(number);
+                textBox3.Text = NumericBases.decimalToHexadecimal(number);
             }
             catch (FormatException ex)
             {
@@ -50,6 +66,11 @@ namespace NumbeToBinaryConverter
             {
                 MessageBox.Show("Número Não Aceito");
             }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
         }
     }
 }

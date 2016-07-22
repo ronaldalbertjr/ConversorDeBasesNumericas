@@ -25,3 +25,12 @@ C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Deb
 C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.Form1.resources
 C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.Properties.Resources.resources
 C:\Users\usuario\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.csproj.GenerateResource.Cache
+C:\Users\ronald.junior\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\bin\Debug\NumbeToBinaryConverter.exe.config
+C:\Users\ronald.junior\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.exe
+C:\Users\ronald.junior\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.pdb
+C:\Users\ronald.junior\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\bin\Debug\NumbeToBinaryConverter.exe
+C:\Users\ronald.junior\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\bin\Debug\NumbeToBinaryConverter.pdb
+C:\Users\ronald.junior\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.csprojResolveAssemblyReference.cache
+C:\Users\ronald.junior\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.Form1.resources
+C:\Users\ronald.junior\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.Properties.Resources.resources
+C:\Users\ronald.junior\Documents\NumbeToBinaryConverter\NumbeToBinaryConverter\obj\Debug\NumbeToBinaryConverter.csproj.GenerateResource.Cache
