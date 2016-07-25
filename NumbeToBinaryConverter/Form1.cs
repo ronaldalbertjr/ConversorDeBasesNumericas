@@ -53,24 +53,81 @@ namespace NumbeToBinaryConverter
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            if (textBox1.Text != "")
             {
-                number = Convert.ToUInt64(textBox1.Text);
-                textBox3.Text = NumericBases.decimalToHexadecimal(number);
+                try
+                {
+                    number = Convert.ToUInt64(textBox1.Text);
+                    textBox3.Text = NumericBases.decimalToHexadecimal(number);
+                }
+                catch (FormatException ex)
+                {
+                    MessageBox.Show("Esse caractere não é um numero");
+                }
+                catch (OverflowException ex)
+                {
+                    MessageBox.Show("Número Não Aceito");
+                }
             }
-            catch (FormatException ex)
+            else
             {
-                MessageBox.Show("Esse caractere não é um numero");
+                try
+                {
+                    number2 = textBox3.Text;
+                    textBox1.Text = Convert.ToString(NumericBases.hexadecimalToDecimal(number2));
+                }
+                catch (FormatException ex)
+                {
+                    MessageBox.Show("Isso não é um binario");
+                }
             }
-            catch (OverflowException ex)
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text != "")
             {
-                MessageBox.Show("Número Não Aceito");
+                try
+                {
+                    number2 = textBox2.Text;
+                    number = NumericBases.binaryToDecimal(number2);
+                    textBox3.Text = Convert.ToString(NumericBases.decimalToHexadecimal(number));
+                }
+                catch (FormatException ex)
+                {
+                    MessageBox.Show("Esse caractere não é um numero");
+                }
+                catch (OverflowException ex)
+                {
+                    MessageBox.Show("Número Não Aceito");
+                }
+            }
+            else
+            {
+                try
+                {
+                    number2 = textBox3.Text;
+                    number = NumericBases.hexadecimalToDecimal(number2);
+                    textBox2.Text = NumericBases.decimalToBinary(number);
+                }
+                catch (FormatException ex)
+                {
+                    MessageBox.Show("Isso não é um binario");
+                }
             }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             textBox1.Text = "";
+            textBox3.Text = "";
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        
     }
 }

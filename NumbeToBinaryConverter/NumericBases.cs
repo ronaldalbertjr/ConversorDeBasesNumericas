@@ -83,24 +83,68 @@ namespace NumbeToBinaryConverter
             return hexad;
         }
 
-        public static int binaryToDecimal(string bin)
+        public static ulong binaryToDecimal(string bin)
         {
-            int dec = 0;
+            ulong dec = 0;
             char[] bina = bin.ToCharArray();
-            /* foreach (char i in bina)
-            {
-                if (i != Convert.ToChar("0") || i != Convert.ToChar("1"))
-                {
-                    throw new FormatException();
-                }
 
-            }*/
             for (int i = 0; i < bina.Length; i++)
             {
                 if (bina[i] == Convert.ToChar("1"))
                 {
                     bina[i] = Convert.ToChar("0");
-                    dec += Convert.ToInt32(Math.Pow(2, bina.Length - (i + 1)));
+                    dec += (ulong) Convert.ToInt32(Math.Pow(2, bina.Length - (i + 1)));
+                }
+            }
+            return dec;
+        }
+
+        public static ulong hexadecimalToDecimal(string hexa)
+        {
+            ulong[] hexad = new ulong[hexa.Length];
+            ulong dec = 0;
+            for (int i = 0; i < hexad.Length; i++)
+            {
+                if (hexa[i] == Convert.ToChar("F"))
+                {
+                    hexad[i] = 15;
+                }
+                else if (hexa[i] == Convert.ToChar("E"))
+                {
+                    hexad[i] = 14;
+                }
+                else if (hexa[i] == Convert.ToChar("D"))
+                {
+                    hexad[i] = 13;
+                }
+                else if (hexa[i] == Convert.ToChar("C"))
+                {
+                    hexad[i] = 12;
+                }
+                else if (hexa[i] == Convert.ToChar("B"))
+                {
+                    hexad[i] = 11;
+                }
+                else if (hexa[i] == Convert.ToChar("A"))
+                {
+                    hexad[i] = 10;
+                }
+                else
+                {
+                    hexad[i] = Convert.ToUInt32(Convert.ToString(hexa[i]));
+                }
+            }
+            Array.Reverse(hexad);
+            for (int i = 0; i < hexad.Length; i++)
+            {
+                Console.WriteLine(hexad[i]);
+                if (i == 0)
+                {
+                    dec += hexad[i];
+                }
+                else
+                {
+                    dec += hexad[i] * Convert.ToUInt32(Math.Pow(16, i));
                 }
             }
             return dec;
