@@ -29,6 +29,10 @@ namespace NumbeToBinaryConverter
 
         public static string decimalToHexadecimal(ulong n)
         {
+            if(n == 0)
+            {
+                return "0";
+            }
             int[] hexa = new int[(int)Math.Floor(Math.Log(n, 16)) + 1];
             string hexad = "";
             while (n > 0)
