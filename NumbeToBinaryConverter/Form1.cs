@@ -53,11 +53,11 @@ namespace NumbeToBinaryConverter
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "")
+            if (textBox4.Text != "")
             {
                 try
                 {
-                    number = Convert.ToUInt64(textBox1.Text);
+                    number = Convert.ToUInt64(textBox4.Text);
                     textBox3.Text = NumericBases.decimalToHexadecimal(number);
                 }
                 catch (FormatException ex)
@@ -74,7 +74,7 @@ namespace NumbeToBinaryConverter
                 try
                 {
                     number2 = textBox3.Text;
-                    textBox1.Text = Convert.ToString(NumericBases.hexadecimalToDecimal(number2));
+                    textBox4.Text = Convert.ToString(NumericBases.hexadecimalToDecimal(number2));
                 }
                 catch (FormatException ex)
                 {
@@ -85,13 +85,13 @@ namespace NumbeToBinaryConverter
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text != "")
+            if (textBox5.Text != "")
             {
                 try
                 {
-                    number2 = textBox2.Text;
+                    number2 = textBox5.Text;
                     number = NumericBases.binaryToDecimal(number2);
-                    textBox3.Text = Convert.ToString(NumericBases.decimalToHexadecimal(number));
+                    textBox6.Text = Convert.ToString(NumericBases.decimalToHexadecimal(number));
                 }
                 catch (FormatException ex)
                 {
@@ -106,9 +106,9 @@ namespace NumbeToBinaryConverter
             {
                 try
                 {
-                    number2 = textBox3.Text;
+                    number2 = textBox6.Text;
                     number = NumericBases.hexadecimalToDecimal(number2);
-                    textBox2.Text = NumericBases.decimalToBinary(number);
+                    textBox5.Text = NumericBases.decimalToBinary(number);
                 }
                 catch (FormatException ex)
                 {
@@ -120,12 +120,16 @@ namespace NumbeToBinaryConverter
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             textBox1.Text = "";
-            textBox3.Text = "";
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            textBox4.Text = "";
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            textBox5.Text = "";
         }
 
         
